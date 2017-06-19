@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1>Counter: {{session['sessionCtr']}}</h1>
+    <form action="/ninja" method="post">
+      <button type="submit" name="ninja">Ninja +2</button>
+    </form>
+    <form action="/hacker" method="post">
+      <button type="submit" name="hacker">Hacker - Reset Counter</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+h1 {
+  color: blue;
+  text-align: center;
+}
+h3 {
+  color: gray;
+  text-align: center;
+}
+input, button {
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+}
+.result{
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.none{
+  background-color: gray;
+  height: 200px;
+  width: 200px;
+}
+.high{
+  background-color: red;
+  height: 200px;
+  width: 200px;
+}
+.low{
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+}
+.correct{
+  background-color: green;
+  height: 200px;
+  width: 200px;
+}
