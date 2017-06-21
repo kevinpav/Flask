@@ -1,0 +1,59 @@
+h1 {
+  color: blue;
+  text-align: center;
+}
+h3, h5 {
+  color: black;
+  text-align: center;
+  margin: 20px auto;
+}
+input {
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+}
+button {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+}
+textarea{
+  /*text-align: center;*/
+}
+.result{
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.none{
+  background-color: gray;
+  height: 200px;
+  width: 200px;
+}
+#box-container{
+  display: inline-block;
+  margin: 10px auto;
+  width: 90%;
+  height: auto;
+  text-align: center;
+}
+.box{
+  background-color: lightgreen;
+  display: inline-block;
+  padding: 20px;
+  margin: 5px 10px;
+  height: 160px;
+  width: 200px;
+}
+#activity-container{
+  width: 80%;
+  height: 120px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  /*border: 2px solid black;*/
+}

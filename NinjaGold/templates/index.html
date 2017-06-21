@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ninjagold.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="../static/ninjagold.css">
+  </head>
+  <body>
+    <h1>Welcome to Ninja Gold!</h1>
+    <h3>Your Gold: {{session['myGold']}}</h3>
+    <div id="box-container">
+      <div class="box">
+        <h3>Farm</h3>
+        <h5>(Earns 10-20 gold)</h5>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="farm" />
+          <input type="submit" value="Find Gold!"/>
+        </form>
+      </div>
+      <div class="box">
+        <h3>Cave</h3>
+        <h5>(Earns 5-10 gold)</h5>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="cave" />
+          <input type="submit" value="Find Gold!"/>
+        </form>
+      </div>
+      <div class="box">
+        <h3>House</h3>
+        <h5>(Earns 2-5 gold)</h5>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="house" />
+          <input type="submit" value="Find Gold!"/>
+        </form>
+      </div>
+      <div class="box">
+        <h3>Casino</h3>
+        <h5>(Earns/Takes 0-50 gold)</h5>
+        <form action="/process_money" method="post">
+          <input type="hidden" name="building" value="casino" />
+          <input type="submit" value="Find Gold!"/>
+        </form>
+      </div>
+    </div>
+    <div id="activity-container">
+      <textarea name="activity" rows="8" cols="80"> {{session['myActivity']}}</textarea>
+    </div>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="reset" />
+      <input type="submit" value="Reset!"/>
+    </form>
+  </body>
+</html>
