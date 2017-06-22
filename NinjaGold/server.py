@@ -11,7 +11,7 @@ def getRandomGold(minNum, maxNum):
 @app.route('/', methods=['GET'])
 def index():
     # session['myGold'] = 0
-    # session['activity-log'] = ''
+    # session['myActivity'] = ''
 
     return render_template("index.html")
 ##
@@ -40,8 +40,14 @@ def process_money():
         print "Nothing to do!"
         minedGold = 0
 
-    session['myGold'] += minedGold
+    try:
+        session['myGold'] += minedGold  # Check if variable is defined
+    except KeyError:
+        session['myGold'] = 0  # If not, initialize both
+        session['myActivity'] = ''
+
     actLog = "Mined " + str(minedGold) + " gold from the " + request.form['building'] + "!\r\n"
+
     if ((minedGold < 0) and (session['myGold'] < 0)):
         actLog += "  OH NOES!!!\r\n"
 
